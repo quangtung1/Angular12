@@ -2,4 +2,8 @@
 <div class="test">
 <h3>Đây là Component Home</h3>
 <h2>Chào bạn {{name}}</h2>
+<input value="{{name}}" title="Đây là {{name}}">
+<br>
+<input [value]="name" title="Đây là name">
+<input [value]="name" [title]="'Đây là'+ name">
 </div>
