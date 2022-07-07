@@ -2,8 +2,18 @@
 <div class="test">
 <h3>Đây là Component Home</h3>
 <br>
-<input type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="age">
 
 <h2>Hello bạn {{name}}</h2>
 <Button (click)="resetName()">Reset tên</Button>
+
+<h3>Tuổi bạn là {{age}}</h3>
+<!-- <h2 *ngIf="age <=18 ">Bạn còn trẻ quá</h2>
+<h2 *ngIf="age >18 ">Bạn đã già rồi</h2> -->
+<div *ngIf="age <=18;then tre ;else gia">
+
+</div>
+
+<ng-template #tre>Bạn còn trẻ quá</ng-template>
+<ng-template #gia>Bạn đã già rồi</ng-template>
 </div>
