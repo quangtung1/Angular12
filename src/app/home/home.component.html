@@ -29,5 +29,18 @@
   </tr>
 
 </table>
+<br>
+<Label>Tỉnh/Thành</Label>
+<select  id="city" (change)="changeCity($event)">
+  <option *ngFor="let c of city" >{{c.city}}</option>
+
+</select>
+<br><br>
+<Label>Quận/Huyện</Label>
+<select  id="district">
+  <option  *ngFor="let d of districts" >{{d}}</option>
+
+</select>
+
 
 </div>
