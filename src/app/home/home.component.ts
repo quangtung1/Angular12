@@ -15,5 +15,9 @@ export class HomeComponent implements OnInit {
 
 
   }
+  public resetName():void{
+    console.log('resetName');
+    this.name = '';
+  }
 
 }
