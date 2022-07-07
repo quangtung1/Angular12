@@ -1,4 +1,7 @@
+import { HighLightDirective } from './../directive/HighLight.directive';
+import { CommonService } from './../common.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-about',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   public loginName = 'admin';
-  constructor() { }
+  public counter = 0;
+  public counterLuyThua = 0;
+  constructor(private common : CommonService) { }
 
   ngOnInit(): void {
+    this.counter = this.common.counter;
+    this.counterLuyThua = this.common.luyThua(this.counter);
+    this.common.counter++;
   }
 
 }
