@@ -10,6 +10,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TemplateFormComponent } from './template-form/template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form/reactive-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GetDataComponent } from './get-data/get-data/get-data.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostDataComponent } from './post-data/post-data/post-data.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     OnSalePipe,
     PageNotFoundComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    GetDataComponent,
+    PostDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

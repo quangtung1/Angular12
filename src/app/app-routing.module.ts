@@ -1,3 +1,5 @@
+import { PostDataComponent } from './post-data/post-data/post-data.component';
+import { GetDataComponent } from './get-data/get-data/get-data.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form/reactive-form.component';
 import { TemplateFormComponent } from './template-form/template-form/template-form.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +12,8 @@ const routes: Routes = [{ path: 'about', component: AboutComponent },
 { path: 'home', component: HomeComponent },
 { path: 'templatefrom', component: TemplateFormComponent },
 { path: 'reactivefrom', component: ReactiveFormComponent },
+{ path: 'getdata', component: GetDataComponent },
+{ path: 'postdata', component: PostDataComponent },
 { path: '**', component: PageNotFoundComponent },
   // Wildcard route for a 404 page];
 ];
