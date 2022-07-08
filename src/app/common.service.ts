@@ -11,4 +11,9 @@ export class CommonService {
   public luyThua(n: number) :number{
     return n*n;
   }
+
+  public submitData(data: any):void{
+    console.log('Gửi Data lên server . Data = ', data);
+  }
+
 }
