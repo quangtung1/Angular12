@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Pipe } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -27,6 +27,10 @@ public getComments2(user: number=1): Observable<any>{
   console.log(url);
   return this.httpClient.get<any>(url,this.httpOptions);
 }
+
+// public getUser(): Observable<any>{{
+//   return {this.httpClient.get(this.REST_API_SERVER2).Pipe(catchError(this.handleError))};
+// }
 
 public postMethod(payload: any): Observable<any>{
   const url =`${this.REST_API_SERVER}/comments`;

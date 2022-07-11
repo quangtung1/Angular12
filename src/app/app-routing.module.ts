@@ -14,6 +14,7 @@ const routes: Routes = [{ path: 'about', component: AboutComponent },
 { path: 'reactivefrom', component: ReactiveFormComponent },
 { path: 'getdata', component: GetDataComponent },
 { path: 'postdata', component: PostDataComponent },
+
 { path: '**', component: PageNotFoundComponent },
   // Wildcard route for a 404 page];
 ];

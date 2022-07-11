@@ -1,0 +1,21 @@
+<p>parent works!</p>
+<div>
+  <h3>Parent Component</h3>
+
+  <form [formGroup]="form">
+    <input type="text" formControlName = "username">
+    <br>
+    <input type="text" formControlName = "password">
+    <br>
+    <Button (click)="clickData(form.value)">Login</Button>
+  </form>
+
+  <br>
+  <Button (click)="clickData2()">Button</Button>
+
+  <ul>
+    <li *ngFor="let user of users">{{user }}</li>
+  </ul>
+  <br>
+  <app-children></app-children>
+</div>

@@ -11,8 +11,13 @@ import { TemplateFormComponent } from './template-form/template-form/template-fo
 import { ReactiveFormComponent } from './reactive-form/reactive-form/reactive-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GetDataComponent } from './get-data/get-data/get-data.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PostDataComponent } from './post-data/post-data/post-data.component';
+import { ChaComponent } from './cha/cha.component';
+import { ConComponent } from './con/con.component';
+import { ChildrenComponent } from './children/children/children.component';
+import { ParentComponent } from './parent/parent/parent.component';
+import { Interceptor } from './Interceptor';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,11 @@ import { PostDataComponent } from './post-data/post-data/post-data.component';
     TemplateFormComponent,
     ReactiveFormComponent,
     GetDataComponent,
-    PostDataComponent
+    PostDataComponent,
+    ChaComponent,
+    ConComponent,
+    ChildrenComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +41,9 @@ import { PostDataComponent } from './post-data/post-data/post-data.component';
     FormsModule,
     ReactiveFormsModule,HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS,useClass : Interceptor, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
